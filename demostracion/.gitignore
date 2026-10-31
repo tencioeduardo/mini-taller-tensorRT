@@ -1,0 +1,51 @@
+# =============================================================================
+# .gitignore de demostracion/
+#
+# Deja el repositorio exactamente como estaba ANTES de ejecutar el cuaderno en
+# Colab: solo código y documentación. Todo lo que se genera después (modelos,
+# datos, resultados, entorno virtual) se ignora y se recrea en cada equipo.
+#
+# Se versionan: Demostracion.md, entrenar_rps.ipynb, requirements.txt, setup.sh,
+#               verificar_entorno.py, rps_common.py, evaluar.py, litert_rps.py,
+#               docs/trazabilidad.md y este archivo.
+#
+# Nota: Git no admite comentarios al final de una línea; por eso cada comentario
+# va en su propia línea.
+# =============================================================================
+
+# --- 1. Generado por el cuaderno entrenar_rps.ipynb (artefactos_rps.zip) -----
+
+# rps_*.tflite, labels.txt y manifest.json
+/modelos/
+
+# test/Piedra|Papel|Tijera/*.jpg y README.md (atribución del dataset)
+/datos/
+
+# El zip descargado de Colab
+/artefactos_rps.zip
+
+# Residuos si el cuaderno se ejecuta en local (no en Colab)
+/artefactos/
+/rps_saved_model/
+
+# --- 2. Generado por setup.sh ------------------------------------------------
+
+/.venv/
+/requirements.lock.txt
+
+# --- 3. Generado por los scripts de la demo ----------------------------------
+
+# evaluar.py: resultados.md y resultados.csv
+/resultados/
+
+# verificar_entorno.py: propio de cada equipo
+/docs/entorno.md
+
+# litert_rps.py, tecla 's': imagen de respaldo con la iluminación del aula
+/test_hand.jpg
+
+# --- 4. Archivos temporales de Python y de Jupyter ---------------------------
+
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/

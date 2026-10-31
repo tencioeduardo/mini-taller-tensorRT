@@ -1,1 +1,1 @@
-# mini-taller-tensorRT
+# mini-taller-literRT

@@ -1,0 +1,11 @@
+# Dependencias de la demostración LiteRT (laptop Linux x86_64, Python 3.10 a 3.14).
+#
+# ai-edge-litert se fija en una versión exacta: la API CompiledModel de Python es
+# reciente y su interfaz puede cambiar entre versiones. Esta es la versión con la que
+# se probó el código y la misma que instala el cuaderno de Colab.
+ai-edge-litert==2.3.0
+
+# NumPy y OpenCV usan rangos: el código solo emplea funciones estables de ambos.
+# setup.sh guarda las versiones exactas instaladas en requirements.lock.txt.
+numpy>=1.26,<3
+opencv-python>=4.10,<6
